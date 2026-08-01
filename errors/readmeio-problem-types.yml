@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  Live probe of https://api.readme.com/v2 (application/problem+json) +
+  https://docs.readme.com/main/reference
+format: rfc9457
+media_type: application/problem+json
+envelope:
+  fields:
+  - name: type
+    description: URI reference identifying the problem type (points at the ReadMe reference docs).
+  - name: title
+    description: Short, human-readable summary of the problem.
+  - name: status
+    description: HTTP status code.
+  - name: detail
+    description: Human-readable explanation specific to this occurrence.
+  - name: errors
+    description: Array of granular field-level errors (may be empty).
+  evidence: >-
+    GET https://api.readme.com/v2/openapi.json returned HTTP 404 with
+    content-type: application/problem+json and a body carrying
+    type/title/status/detail/errors (plus a whimsical "poem" field on 404s).
+problems:
+- status: 400
+  schema: API_Errors_BadRequest
+  title: Bad Request
+  detail: The request was malformed or failed validation.
+- status: 401
+  schema: API_Errors_Unauthorized
+  title: Unauthorized
+  detail: Missing or invalid API key / Bearer token.
+- status: 403
+  schema: API_Errors_Forbidden
+  title: Forbidden
+  detail: Authenticated but not permitted to perform this action.
+- status: 404
+  schema: API_Errors_NotFound
+  title: Not Found
+  detail: The requested endpoint or resource does not exist.
+- status: 500
+  schema: API_Errors_InternalServerError
+  title: Internal Server Error
+  detail: An unexpected error occurred on ReadMe's side.
+notes: >-
+  Error schema names (API_Errors_*) were observed in the live v2 API surface. Titles
+  and details are the conventional RFC 9457 meanings for each status; consult the
+  reference docs for endpoint-specific problem `type` URIs.

@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.readme.com/main/reference/pagination + live API probe
+api: ReadMe API (v2)
+base_url: https://api.readme.com/v2
+authentication:
+  style: bearer-token
+  header: 'Authorization: Bearer <key>'
+  ref: authentication/readmeio-authentication.yml
+pagination:
+  style: page-number
+  request_params:
+  - name: page
+    description: Which page to retrieve.
+  - name: per_page
+    description: Page size, up to a maximum of 100 (default 10).
+  response:
+    envelope_field: paging
+    paging_links:
+    - next
+    - previous
+    - first
+    - last
+    top_level_fields:
+    - total
+    - page
+    - per_page
+  docs: https://docs.readme.com/main/reference/pagination
+error_envelope:
+  format: rfc9457
+  media_type: application/problem+json
+  fields:
+  - type
+  - title
+  - status
+  - detail
+  - errors
+  ref: errors/readmeio-problem-types.yml
+  evidence: >-
+    Live probe of https://api.readme.com/v2 returned
+    content-type: application/problem+json; charset=utf-8 with type/title/status/detail/errors.
+idempotency:
+  supported: false
+  note: >-
+    ReadMe does not document an idempotency-key header for its API. No Idempotency
+    pointer is emitted (no fabrication).
+versioning:
+  scheme: uri-path
+  current: v2 (https://api.readme.com/v2)
+  legacy: v1 (https://dash.readme.com/api/v1, HTTP Basic auth)
+  ref: lifecycle/readmeio-lifecycle.yml
+rate_limiting:
+  documented: unknown
+  note: No public rate-limit header contract was found in the docs at capture time.

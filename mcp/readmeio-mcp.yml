@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: >-
+  Tools derived from documented ReadMe API v2 operations
+  (https://docs.readme.com/main/reference/readme-api). Product context searched from
+  the ReadMe changelog.
+product_note: >-
+  ReadMe is an MCP producer: it can host an MCP server for each ReadMe developer hub,
+  and its changelog documents "MCP Server Selection" (2026-06-12) and "MCP Server
+  Authentication and Agent Upgrades" (2026-04-24). Each customer project gets its own
+  hosted MCP endpoint; no single fixed public MCP URL for ReadMe's own management API
+  was confirmed at capture time, so the tool list below is a candidate mapped from the
+  v2 API.
+server:
+  name: readmeio
+  transport: http
+  url: null
+  auth: bearer
+tools:
+- name: get_project
+  description: Return metadata about your ReadMe project.
+  source_operation: ReadMe API v2#getProject
+- name: get_api_keys
+  description: Get the API keys for your ReadMe project.
+  source_operation: ReadMe API v2#getApiKeys
+- name: create_reference_page
+  description: Create a page in the API Reference section of your project.
+  source_operation: ReadMe API v2#createReference
+- name: create_guide
+  description: Create a page in the Guides section of your project.
+  source_operation: ReadMe API v2#createGuide
+- name: get_apis
+  description: Get all API definitions from your project.
+  source_operation: ReadMe API v2#getApis
+- name: create_api
+  description: Create an API definition in the API Reference section.
+  source_operation: ReadMe API v2#createApi
+- name: validate_api
+  description: Validate an API definition before uploading.
+  source_operation: ReadMe API v2#validateApi
+- name: create_changelog
+  description: Create a new changelog entry in your project.
+  source_operation: ReadMe API v2#createChangelog
+- name: search
+  description: Perform a search query across the ReadMe project.
+  source_operation: ReadMe API v2#search
+- name: ask_owlbot
+  description: Ask Owlbot AI a question about the content of your docs.
+  source_operation: ReadMe API v2#askOwlbot

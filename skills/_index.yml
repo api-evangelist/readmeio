@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: generated
+source: https://docs.readme.com/main/reference/readme-api
+skills:
+- file: readmeio-sync-api-definition.md
+  name: Sync an API definition into a ReadMe project
+  api: ReadMe API (v2)
+  operations: [validateApi, getApis, createApi, updateApi]
+- file: readmeio-publish-changelog.md
+  name: Publish a changelog entry to a ReadMe project
+  api: ReadMe API (v2)
+  operations: [getChangelogs, createChangelog, updateChangelog, getChangelog]

@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/readmeio/rdme + https://docs.readme.com/main/docs/rdme
+name: rdme
+description: ReadMe's official CLI and GitHub Action for syncing docs and API definitions.
+version: 10.9.3
+repository: https://github.com/readmeio/rdme
+registry: npm
+package: rdme
+install:
+- method: npm-global
+  command: npm install -g rdme
+- method: npx
+  command: npx rdme
+- method: github-action
+  command: uses ReadMe's rdme GitHub Action in CI
+binary: rdme
+auth:
+  command: rdme login
+  note: >-
+    Authenticates with a ReadMe API key; also configurable via the RDME_API_KEY
+    environment variable for CI use.
+command_groups:
+- group: openapi
+  purpose: Upload, sync, validate, and reduce OpenAPI/Swagger definitions.
+  commands:
+  - rdme openapi upload
+  - rdme openapi validate
+  - rdme openapi convert
+  - rdme openapi reduce
+  - rdme openapi inspect
+- group: docs
+  purpose: Sync guides / reference markdown pages to a ReadMe project.
+  commands:
+  - rdme docs upload
+- group: changelog
+  purpose: Sync changelog entries.
+  commands:
+  - rdme changelog upload
+- group: custom pages
+  purpose: Sync custom pages.
+  commands:
+  - rdme custompages upload
+key_flows:
+- name: CI docs sync
+  description: >-
+    Run rdme (or the rdme GitHub Action) on push to sync an OpenAPI definition and
+    markdown docs to a ReadMe project, keeping published docs in lockstep with the repo.
+notes: >-
+  Command surface reflects rdme 10.x (ReadMe Refactored era). Exact subcommands may
+  vary by version; the binary and package are first-party (github.com/readmeio/rdme).

@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  Live probe of https://api.readme.com/v2 +
+  https://docs.readme.com/main/reference/authentication +
+  https://docs.readme.com/main/reference/pagination
+standards:
+- id: rfc9457-problem-details
+  conforms: true
+  evidence: >-
+    v2 responses use application/problem+json with type/title/status/detail/errors.
+- id: http-bearer-auth
+  conforms: true
+  evidence: 'v2 uses Authorization: Bearer <api-key>.'
+- id: http-basic-auth
+  conforms: true
+  evidence: legacy v1 uses HTTP Basic auth with the API key.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 flows documented; auth is project API keys.
+- id: openid-connect
+  conforms: false
+- id: openapi
+  conforms: true
+  evidence: >-
+    ReadMe's own reference is OpenAPI-driven, and ReadMe is an OpenAPI-native
+    platform (uploads/validates OpenAPI via rdme and the oas library).
+- id: page-number-pagination
+  conforms: true
+  evidence: page/per_page query params with a paging envelope (next/previous/first/last).
+- id: fhir-r4
+  conforms: false
+- id: scim
+  conforms: false
+- id: fapi
+  conforms: false
+notes: >-
+  Derived/searched conformance assertions only. ReadMe operates a trust center
+  (https://trust.readme.com) but specific certifications could not be verified from
+  its SPA at capture time, so no Compliance pointer is emitted.

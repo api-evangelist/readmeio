@@ -1,8 +1,27 @@
 aid: readmeio
 name: ReadMe.io
-description: 'ReadMe.io is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: apis. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  ReadMe is a developer-experience platform that turns an OpenAPI definition into
+  interactive, personalized API documentation and developer hubs — complete with a
+  live API Explorer ("Try It!"), guides, recipes, a changelog, discussions, and
+  Developer Metrics that show how real users call your API. Teams manage their docs
+  as code (Git-synced, branch-based via ReadMe Refactored) and programmatically through
+  the ReadMe API. This profile catalogs ReadMe's own public APIs: the ReadMe API v2
+  (Bearer-token, RFC 9457 errors), the Developer Metrics API, and the Legacy API v1.
 url: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://readme.com/public/img/readme-og.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,16 +30,127 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Apis
-apis: []
+- Documentation
+- API Documentation
+- Developer Experience
+- Developer Portal
+- OpenAPI
+- Developer Hub
+- API Metrics
+apis:
+- name: ReadMe API (v2)
+  description: >-
+    The current ReadMe API for managing your project programmatically — API keys,
+    API definitions, reference/guides/custom pages, categories, branches, changelog
+    entries, recipes, images, fonts, Owlbot AI, project metadata, and search. Uses
+    Bearer-token auth and returns RFC 9457 application/problem+json errors.
+  humanURL: https://docs.readme.com/main/reference/intro-to-the-readme-api
+  baseURL: https://api.readme.com/v2
+  tags:
+  - Documentation
+  - Developer Experience
+  properties:
+  - type: Documentation
+    url: https://docs.readme.com/main/reference/intro-to-the-readme-api
+  - type: APIReference
+    url: https://docs.readme.com/main/reference
+- name: Developer Metrics API
+  description: >-
+    Read-only analytics over your ReadMe developer hub — page views (total, unique,
+    by day, by user, by path), best/worst/top pages, average page quality, top search
+    terms, users by search term, and page comments/performance.
+  humanURL: https://docs.readme.com/main/reference/developer-metrics-api
+  baseURL: https://api.readme.com/v2
+  tags:
+  - Metrics
+  - Analytics
+  properties:
+  - type: APIReference
+    url: https://docs.readme.com/main/reference/metrics-api-introduction
+- name: ReadMe API (v1, Legacy)
+  description: >-
+    The legacy ReadMe API (HTTP Basic auth with an API key) for docs, categories,
+    versions, custom pages, changelog, API specification upload, the API registry,
+    and search. Not available to projects using ReadMe Refactored; superseded by v2.
+  humanURL: https://docs.readme.com/main/reference/legacy-api
+  baseURL: https://dash.readme.com/api/v1
+  tags:
+  - Legacy
+  properties:
+  - type: APIReference
+    url: https://docs.readme.com/main/reference/legacy-api
+  - type: Deprecation
+    url: https://docs.readme.com/main/reference/api-upgrade-guide
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1
 common:
 - type: Website
-  url: http://www.readme.io
+  url: https://readme.com
+- type: DeveloperPortal
+  url: https://docs.readme.com
+- type: Documentation
+  url: https://docs.readme.com/main/docs/getting-started
+- type: APIReference
+  url: https://docs.readme.com/main/reference
+- type: GettingStarted
+  url: https://docs.readme.com/main/docs/getting-started
+- type: Authentication
+  url: authentication/readmeio-authentication.yml
+- type: Blog
+  url: https://readme.com/blog
+- type: GitHubOrganization
+  url: https://github.com/readmeio
+- type: Pricing
+  url: https://readme.com/pricing
+- type: SignUp
+  url: https://dash.readme.com/signup
+- type: Login
+  url: https://dash.readme.com/login
+- type: TermsOfService
+  url: https://readme.com/tos
+- type: PrivacyPolicy
+  url: https://readme.com/privacy
+- type: StatusPage
+  url: https://status.readme.com
+- type: TrustCenter
+  url: https://trust.readme.com
+- type: ChangeLog
+  url: changelog/readmeio-changelog.yml
+- type: Packages
+  url: packages/readmeio-packages.yml
+- type: SDKs
+  url: packages/readmeio-packages.yml
+- type: CLI
+  url: cli/readmeio-cli.yml
+- type: LLMsTxt
+  url: llms/readmeio-llms.txt
+- type: Conventions
+  url: conventions/readmeio-conventions.yml
+- type: ErrorCatalog
+  url: errors/readmeio-problem-types.yml
+- type: Conformance
+  url: conformance/readmeio-conformance.yml
+- type: Lifecycle
+  url: lifecycle/readmeio-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/readmeio-lifecycle.yml
+- type: MCPServer
+  url: mcp/readmeio-mcp.yml
+- type: WellKnown
+  url: well-known/readmeio-well-known.yml
+- type: DomainSecurity
+  url: security/readmeio-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml

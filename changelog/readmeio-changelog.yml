@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.readme.com/main/changelog
+docs: https://docs.readme.com/main/changelog
+scheme: dated-product-changelog
+current_platform: ReadMe Refactored (deploy 5.815.0 observed)
+entries:
+- date: '2026-07-17'
+  title: Endpoint- and Path-Level API Servers
+- date: '2026-07-10'
+  title: Shareable Branch URLs & Redesigned Audit Logs
+- date: '2026-06-26'
+  title: API Parameters in Search & Nesting
+- date: '2026-06-12'
+  title: Typography Updates, Page Settings Panel & MCP Server Selection
+- date: '2026-05-29'
+  title: AI Summaries, Image Frames & Page Search
+- date: '2026-05-15'
+  title: Reviews and Notifications for Branching
+  category: Added
+- date: '2026-05-08'
+  title: GitHub AI Writer, @readme/cli, and New Admin
+- date: '2026-04-24'
+  title: MCP Server Authentication and Agent Upgrades
+notes: >-
+  Recent window only; the live changelog at docs.readme.com/main/changelog is the
+  source of truth. ReadMe also exposes changelog entries programmatically via the
+  ReadMe API (getChangelogs/createChangelog/...).

@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/readmeio + npm registry
+packages:
+- language: javascript
+  registry: npm
+  name: rdme
+  url: https://www.npmjs.com/package/rdme
+  install: npm install -g rdme
+  version: 10.9.3
+  official: true
+  description: >-
+    ReadMe's official CLI and GitHub Action — sync OpenAPI definitions, docs, guides,
+    changelog, and custom pages to your ReadMe project; validate/reduce OpenAPI.
+  repository: https://github.com/readmeio/rdme
+  role: cli
+- language: javascript
+  registry: npm
+  name: api
+  url: https://www.npmjs.com/package/api
+  install: npx api install <definition>
+  version: 7.0.0-next.18
+  official: true
+  description: >-
+    Magical SDK generation from an OpenAPI definition — ReadMe's universal client
+    that turns any OpenAPI spec into a typed JavaScript/TypeScript SDK at runtime.
+  homepage: https://api.readme.dev
+  repository: https://github.com/readmeio/api
+  role: sdk-generator
+- language: javascript
+  registry: npm
+  name: oas
+  url: https://www.npmjs.com/package/oas
+  install: npm install oas
+  official: true
+  description: >-
+    ReadMe's OpenAPI/Swagger tooling library used across the ReadMe stack (parsing,
+    reducing, and operating on OpenAPI definitions).
+  repository: https://github.com/readmeio/oas
+  role: tooling

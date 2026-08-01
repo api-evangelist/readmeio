@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.readme.com/main/reference/api-upgrade-guide +
+  https://docs.readme.com/main/reference/authentication + live host probes
+versioning:
+  scheme: uri-path
+  current: v2
+  current_base: https://api.readme.com/v2
+  legacy: v1
+  legacy_base: https://dash.readme.com/api/v1
+  docs: https://docs.readme.com/main/reference/intro-to-the-readme-api
+deprecation:
+  policy_url: https://docs.readme.com/main/reference/api-upgrade-guide
+  deprecated_surface: >-
+    The Legacy API v1 (dash.readme.com/api/v1, HTTP Basic auth) is superseded by v2
+    and is not available to projects using ReadMe Refactored. An upgrade guide is
+    published for migrating from v1 to v2.
+  sunset_header: unknown
+status_page: https://status.readme.com
+status_page_backend: https://readme.statuspage.io
+sla:
+  url: null
+  note: No public SLA/uptime target was found outside Enterprise agreements.
+notes: >-
+  ReadMe operates a public Statuspage-hosted status page and publishes a v1->v2 API
+  upgrade guide. StatusPage and Deprecation pointers are wired separately in apis.yml.
