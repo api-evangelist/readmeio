@@ -64,6 +64,103 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ReadMe.io is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: apis. This profile is a lead awaiting the enrichment pipeline.
+ReadMe is a developer-experience platform that turns an OpenAPI definition into interactive, personalized API documentation and developer hubs — complete with a live API Explorer ("Try It!"), guides, recipes, a changelog, discussions, and Developer Metrics that show how real users call your API. Teams manage their docs as code (Git-synced, branch-based via ReadMe Refactored) and programmatically through the ReadMe API. This profile catalogs ReadMe's own public APIs: the ReadMe API v2 (Bearer-token, RFC 9457 errors), the Developer Metrics API, and the Legacy API v1.
 
-Backed by: accel — http://www.readme.io
+**Areas:** Company · Documentation · API Documentation · Developer Experience · Developer Portal · OpenAPI · Developer Hub · API Metrics
+
+## ReadMe.io on APIs.io
+
+Everything profiled for ReadMe.io is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/readmeio/](https://apis.io/providers/readmeio/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [ReadMe API (v2)](https://apis.io/apis/readmeio/readme-api-v2/) — The current ReadMe API for managing your project programmatically — API keys, API definitions, reference/guides/custom pages, categories, branches,…
+- [Developer Metrics API](https://apis.io/apis/readmeio/developer-metrics-api/) — Read-only analytics over your ReadMe developer hub — page views (total, unique, by day, by user, by path), best/worst/top pages, average page quality, top…
+- [ReadMe API (v1, Legacy)](https://apis.io/apis/readmeio/readme-api-v1-legacy/) — The legacy ReadMe API (HTTP Basic auth with an API key) for docs, categories, versions, custom pages, changelog, API specification upload, the API registry,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [readmeio](https://apis.io/servers/readmeio/readmeio/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Readmeio Authentication](https://apis.io/security/readmeio/readmeio-authentication/)
+- [Readmeio Domain Security](https://apis.io/security/readmeio/readmeio-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://readme.com)
+- [Documentation](https://docs.readme.com/main/docs/getting-started)
+- [Getting started](https://docs.readme.com/main/docs/getting-started)
+- [API reference](https://docs.readme.com/main/reference)
+- [Pricing](https://readme.com/pricing)
+- [Sign up](https://dash.readme.com/signup)
+- [Blog](https://readme.com/blog)
+- [Trust centre](https://trust.readme.com)
+- [Terms of service](https://readme.com/tos)
+- [Privacy policy](https://readme.com/privacy)
+- [GitHub](https://github.com/readmeio)
+- [Status](https://status.readme.com)
+
+## API Evangelist rating
+
+**Kin Score 39.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 52.6 |
+
+**Agent readiness 6.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/readmeio/](https://apis.io/providers/readmeio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ReadMe.io: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/readmeio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
